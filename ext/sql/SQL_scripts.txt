@@ -1,0 +1,57 @@
+CREATE SCHEMA `banklist` ;
+========================================================
+
+CREATE TABLE `banklist`.`user` (
+  `userID` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  `surname` VARCHAR(45) NULL,
+  PRIMARY KEY (`userID`));
+========================================================
+
+CREATE TABLE `banklist`.`account` (
+  `accountID` INT NOT NULL AUTO_INCREMENT,
+  `account` INT NULL,
+  `userID` INT NULL,
+  PRIMARY KEY (`accountID`),
+  INDEX `userID_idx` (`userID` ASC) VISIBLE,
+  CONSTRAINT `userID`
+    FOREIGN KEY (`userID`)
+    REFERENCES `banklist`.`user` (`userID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+==========================================================
+
+INSERT INTO `banklist`.`user` (`userID`, `name`, `surname`) VALUES ('1', 'Dima', 'Korotin');
+INSERT INTO `banklist`.`user` (`userID`, `name`, `surname`) VALUES ('2', 'Nastya', 'Poddubskaya');
+INSERT INTO `banklist`.`user` (`userID`, `name`, `surname`) VALUES ('3', 'Lera', 'Babydova');
+INSERT INTO `banklist`.`user` (`userID`, `name`, `surname`) VALUES ('4', 'Vika', 'Belikova');
+INSERT INTO `banklist`.`user` (`userID`, `name`, `surname`) VALUES ('5', 'Tanya', 'Brovchenlo');
+INSERT INTO `banklist`.`user` (`userID`, `name`, `surname`) VALUES ('6', 'Vitas ', 'Shavrov');
+INSERT INTO `banklist`.`user` (`userID`, `name`, `surname`) VALUES ('7', 'Igor', 'Sergienya');
+INSERT INTO `banklist`.`user` (`userID`, `name`, `surname`) VALUES ('8', 'Tanya', 'Bunas');
+INSERT INTO `banklist`.`user` (`userID`, `name`, `surname`) VALUES ('9', 'Egor', 'Kurlyandchik');
+INSERT INTO `banklist`.`user` (`userID`, `name`, `surname`) VALUES ('10', 'German', 'Hoff');
+INSERT INTO `banklist`.`user` (`userID`, `name`, `surname`) VALUES ('11', 'Louis', 'CK');
+INSERT INTO `banklist`.`user` (`userID`, `name`, `surname`) VALUES ('12', 'Tomas', 'Muller');
+INSERT INTO `banklist`.`user` (`userID`, `name`, `surname`) VALUES ('13', 'Hey', 'Arnold');
+INSERT INTO `banklist`.`user` (`userID`, `name`, `surname`) VALUES ('14', 'Winnie', 'Pooh');
+INSERT INTO `banklist`.`user` (`userID`, `name`, `surname`) VALUES ('15', 'Sub', 'Zero');
+===========================================================
+
+
+INSERT INTO `banklist`.`account` (`accountID`, `account`, `userID`) VALUES ('1', '12001', '1');
+INSERT INTO `banklist`.`account` (`accountID`, `account`, `userID`) VALUES ('2', '13456', '2');
+INSERT INTO `banklist`.`account` (`accountID`, `account`, `userID`) VALUES ('3', '15235', '3');
+INSERT INTO `banklist`.`account` (`accountID`, `account`, `userID`) VALUES ('4', '24563', '4');
+INSERT INTO `banklist`.`account` (`accountID`, `account`, `userID`) VALUES ('5', '22244', '5');
+INSERT INTO `banklist`.`account` (`accountID`, `account`, `userID`) VALUES ('6', '30864', '6');
+INSERT INTO `banklist`.`account` (`accountID`, `account`, `userID`) VALUES ('7', '34623', '7');
+INSERT INTO `banklist`.`account` (`accountID`, `account`, `userID`) VALUES ('8', '47754', '8');
+INSERT INTO `banklist`.`account` (`accountID`, `account`, `userID`) VALUES ('9', '33211', '9');
+INSERT INTO `banklist`.`account` (`accountID`, `account`, `userID`) VALUES ('10', '24678', '10');
+INSERT INTO `banklist`.`account` (`accountID`, `account`, `userID`) VALUES ('11', '46247', '11');
+INSERT INTO `banklist`.`account` (`accountID`, `account`, `userID`) VALUES ('12', '54444', '12');
+INSERT INTO `banklist`.`account` (`accountID`, `account`, `userID`) VALUES ('13', '57523', '13');
+INSERT INTO `banklist`.`account` (`accountID`, `account`, `userID`) VALUES ('14', '33332', '14');
+INSERT INTO `banklist`.`account` (`accountID`, `account`, `userID`) VALUES ('15', '12345', '15');
+=============================================================
