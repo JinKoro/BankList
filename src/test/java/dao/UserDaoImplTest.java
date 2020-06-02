@@ -1,8 +1,7 @@
-package service;
+package dao;
 
-import dao.AccountDao;
 import dao.UserDao;
-import model.Account;
+import dao.UserDaoImpl;
 import model.User;
 import org.jmock.Mockery;
 import org.junit.jupiter.api.Test;
@@ -12,7 +11,6 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class UserDaoImplTest {
 

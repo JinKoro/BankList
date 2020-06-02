@@ -1,13 +1,10 @@
-package service;
+package dao;
 
 import dao.AccountDao;
+import dao.AccountDaoImpl;
 import model.Account;
 import org.jmock.Mockery;
-import org.jmock.api.Expectation;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.plugins.MockMaker;
 
 
 import static org.hamcrest.CoreMatchers.*;
@@ -15,8 +12,6 @@ import static org.junit.Assert.*;
 
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class AccountDaoImplTest {
 

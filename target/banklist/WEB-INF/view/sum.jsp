@@ -1,6 +1,6 @@
 <%@ page import="model.Account" %>
 <%@ page import="dao.AccountDao" %>
-<%@ page import="service.AccountDaoImpl" %>
+<%@ page import="dao.AccountDaoImpl" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.math.BigDecimal" %><%--
   Created by IntelliJ IDEA.
