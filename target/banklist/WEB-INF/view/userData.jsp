@@ -7,13 +7,14 @@
 --%>
 <%@ page import="model.User" %>
 <%@ page import="java.util.List" %>
-<%@ page contentType="text/html; ISO-8859-1" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>User Data</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+
     <style>
         <%@include file='/style/style.css' %>
     </style>

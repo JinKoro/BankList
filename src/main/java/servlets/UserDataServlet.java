@@ -1,9 +1,8 @@
 package servlets;
 
 import dao.UserDao;
-import dao.UserDaoImpl;
+import service.UserDaoImpl;
 import model.User;
-import service.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,13 +13,9 @@ import java.util.List;
 
 public class UserDataServlet extends HttpServlet {
 
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Integer userId = Integer.parseInt(req.getParameter("userId"));
-
-        /*List<User> users = new UserServiceImpl().findUserDataById(userId);*/
-
         UserDao<User> userDao = new UserDaoImpl();
         List<User> users = userDao.findUserDataById(userId);
         req.setAttribute("users", users);

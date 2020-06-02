@@ -1,6 +1,6 @@
 <%@ page import="model.Account" %>
 <%@ page import="dao.AccountDao" %>
-<%@ page import="dao.AccountDaoImpl" %>
+<%@ page import="service.AccountDaoImpl" %>
 <%@ page import="java.util.Comparator" %><%--
   Created by IntelliJ IDEA.
   User: Jin

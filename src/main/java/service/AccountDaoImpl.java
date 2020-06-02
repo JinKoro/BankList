@@ -1,10 +1,8 @@
-package dao;
+package service;
 
 import connection.ConnectionPool;
 import dao.AccountDao;
 import model.Account;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -13,7 +11,7 @@ import java.util.List;
 public class AccountDaoImpl implements AccountDao<Account> {
 
     private final static String SQL_FIND_ALL_ACCOUNTS = "select * from account";
-    private final static Logger logger = LoggerFactory.getLogger(AccountDaoImpl.class);
+
     @Override
     public List<Account> findAllAccounts() {
         Connection connection = ConnectionPool.getInstance().getConnection();
@@ -30,7 +28,6 @@ public class AccountDaoImpl implements AccountDao<Account> {
                 Account accounts = new Account(accountID, account, userId);
                 accountData.add(accounts);
             }
-            logger.info("All accounts were found");
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } finally {

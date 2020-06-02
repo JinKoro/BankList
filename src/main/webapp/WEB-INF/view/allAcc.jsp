@@ -27,7 +27,6 @@
                 <td>${account.getAccountId()}</td>
                 <td>${account.getAccount()}</td>
                 <td>${account.getUserId()}</td>
-
             </tr>
         </c:forEach>
     </table>
